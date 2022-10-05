@@ -9,7 +9,7 @@ var bodyParser = require("body-parser")
 var con = mysql.createConnection({
     host: "localhost",
     user: "root",
-    password: "n0m3l0",
+    password: "Titos_304",
     database: "prueba"
 })
 
@@ -48,9 +48,9 @@ app.get("/getusuario", (req, res) => {
         var userHTML = ""
         var i = 0
         console.log(respuesta)
-        respuesta.forEach(user => {
+        respuesta.forEach(respuesta => {
             i++
-            userHTML += `<tr><td>${i}</td><td>${user.nombre}</td></tr>`
+            userHTML += `<tr><td>${i}</td><td>${respuesta.name}</td></tr>`
         })
 
         return res.send(`<table>
