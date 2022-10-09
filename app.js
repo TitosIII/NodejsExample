@@ -6,17 +6,13 @@ var app = express()
 
 var bodyParser = require("body-parser")
 
+var dbpareser = require("parse-database-url")
 
-const dburl = "mysql://root:Qj2N6fHvEbOkZSsAaD3t@containers-us-west-58.railway.app:5648/railway"
+const dburl = "mysql://root:Q65HGWdKtKO57OluB8is@containers-us-west-92.railway.app:7783/railway"
 
-var con = mysql.createConnection({
-    port:"mysql",
-    host: "containers-us-west-58.railway.app",
-    user: "root",
-    password: "Qj2N6fHvEbOkZSsAaD3t",
-    port:"5648",
-    database: "railway"
-})
+var dbconfig = dbpareser(dburl)
+
+var con = mysql.createConnection(dbconfig)
 
 con.connect()
 
