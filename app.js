@@ -1,12 +1,10 @@
 const express = require("express")
-
 const mysql = require("mysql2")
-
+const port = require("config.js")
 var app = express()
-
 var bodyParser = require("body-parser")
-
 var dbpareser = require("parse-database-url")
+const { PORT } = require("./config")
 
 const dburl = "mysql://root:Q65HGWdKtKO57OluB8is@containers-us-west-92.railway.app:7783/railway"
 
@@ -36,8 +34,8 @@ app.post("/agregarUsuario", (req, res) => {
 
 })
 
-app.listen(3000, () => {
-    console.log("El servidor escuchando el puerto 3000")
+app.listen(port, () => {
+    console.log(`El servidor escuchando el puerto ${port}`)
 
 })
 
