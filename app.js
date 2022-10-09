@@ -1,6 +1,6 @@
 const express = require("express")
 const mysql = require("mysql2")
-const port = require("/config.js")
+const port = require("./config.js")
 var app = express()
 var bodyParser = require("body-parser")
 var dbpareser = require("parse-database-url")
