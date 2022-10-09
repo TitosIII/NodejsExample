@@ -6,11 +6,16 @@ var app = express()
 
 var bodyParser = require("body-parser")
 
+
+const dburl = "mysql://root:Qj2N6fHvEbOkZSsAaD3t@containers-us-west-58.railway.app:5648/railway"
+
 var con = mysql.createConnection({
-    host: "localhost",
+    port:"mysql",
+    host: "containers-us-west-58.railway.app",
     user: "root",
-    password: "Titos_304",
-    database: "prueba"
+    password: "Qj2N6fHvEbOkZSsAaD3t",
+    port:"5648",
+    database: "railway"
 })
 
 con.connect()
